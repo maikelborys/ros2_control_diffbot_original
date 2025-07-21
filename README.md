@@ -1,10 +1,5 @@
-# ros2_control_diffbot_original
+# ros2_control_diffbot_original package from ros2_control
 
-**DiffBot Reference Implementation** - A comprehensive ros2_control demo package for differential drive robots, serving as a learning reference for implementing VESC CAN communication systems.
-
-## Overview
-
-This package provides a complete, working implementation of a differential drive robot using the ros2_control framework. It has been renamed from the original `ros2_control_demo_example_2` to serve as a clean reference implementation for understanding ros2_control patterns and integrating them with real hardware like VESC motor controllers.
 
 **DiffBot** (*Differential Mobile Robot*) is a simple mobile base with differential drive kinematics. The robot is essentially a box that moves according to differential drive principles, making it perfect for learning and prototyping.
 
@@ -192,5 +187,3 @@ ros2 topic hz /diffbot_base_controller/odom
 ---
 
 **Status**: ✅ Fully functional and tested  
-**Purpose**: Educational reference and VESC integration template  
-**Maintained**: Active development for robot control learning
