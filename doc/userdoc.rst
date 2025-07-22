@@ -88,17 +88,9 @@ Tutorial steps
 
    .. code-block:: shell
 
-    ros2 topic pub --rate 10 /cmd_vel geometry_msgs/msg/TwistStamped "
-      header: auto
-      twist:
-        linear:
-          x: 0.7
-          y: 0.0
-          z: 0.0
-        angular:
-          x: 0.0
-          y: 0.0
-          z: 1.0"
+    ros2 topic pub /cmd_vel geometry_msgs/msg/TwistStamped \
+      "{header: {stamp: {sec: 0, nanosec: 0}, frame_id: ''}, 
+        twist: {linear: {x: 0.3, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.2}}}" -r 10
 
    You should now see an orange box circling in *RViz*.
    Also, you should see changing states in the terminal where launch file is started.
@@ -179,10 +171,10 @@ Files used for this demos
 * Controllers yaml: `diffbot_controllers.yaml <https://github.com/ros-controls/ros2_control_demos/tree/{REPOS_FILE_BRANCH}/example_2/bringup/config/diffbot_controllers.yaml>`__
 * URDF file: `diffbot.urdf.xacro <https://github.com/ros-controls/ros2_control_demos/tree/{REPOS_FILE_BRANCH}/example_2/description/urdf/diffbot.urdf.xacro>`__
 
-  * Description: `diffbot_description.urdf.xacro <https://github.com/ros-controls/ros2_control_demos/tree/{REPOS_FILE_BRANCH}/ros2_control_demo_description/diffbot/urdf/diffbot_description.urdf.xacro>`__
+  * Description: `diffbot_description.urdf.xacro <./description/urdf/diffbot_description.urdf.xacro>`__
   * ``ros2_control`` tag: `diffbot.ros2_control.xacro <https://github.com/ros-controls/ros2_control_demos/tree/{REPOS_FILE_BRANCH}/example_2/description/ros2_control/diffbot.ros2_control.xacro>`__
 
-* RViz configuration: `diffbot.rviz <https://github.com/ros-controls/ros2_control_demos/tree/{REPOS_FILE_BRANCH}/ros2_control_demo_description/diffbot/rviz/diffbot.rviz>`__
+* RViz configuration: `diffbot.rviz <./bringup/rviz/diffbot.rviz>`__
 
 * Hardware interface plugin: `diffbot_system.cpp <https://github.com/ros-controls/ros2_control_demos/tree/{REPOS_FILE_BRANCH}/example_2/hardware/diffbot_system.cpp>`__
 

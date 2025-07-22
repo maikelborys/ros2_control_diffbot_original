@@ -52,7 +52,7 @@ install(
   DESTINATION share/ros2_control_diffbot_original
 )
 install(
-  DIRECTORY bringup/launch bringup/config
+  DIRECTORY bringup/launch bringup/config bringup/rviz
   DESTINATION share/ros2_control_diffbot_original
 )
 install(TARGETS ros2_control_diffbot_original
